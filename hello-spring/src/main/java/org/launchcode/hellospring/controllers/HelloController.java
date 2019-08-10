@@ -1,4 +1,4 @@
-package org.launchcode.controllers;
+package org.launchcode.hellospring.controllers;
 
 
 import org.springframework.stereotype.Controller;
@@ -11,5 +11,11 @@ public class HelloController {
     @ResponseBody
     public String index(){
         return "Hello World";
+    }
+
+    @RequestMapping(value="goodbye")
+    @ResponseBody
+    public String goodbye(){
+        return "Goodbye";
     }
 }
