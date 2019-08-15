@@ -29,7 +29,7 @@ public class HelloController {
     @RequestMapping(value = "hello/{name}")
     @ResponseBody
     public String helloUrlSegment(@PathVariable String name) {
-        return "hello "+ name;
+        return "Hello "+ name;
 
     }
 
