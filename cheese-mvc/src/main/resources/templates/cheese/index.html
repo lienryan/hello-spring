@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}">Default title</h1>
+<nav th:replace="fragments :: navigation"></nav>
+<p th:unless="${cheeses} and ${cheeses.size()}">no cheese</p>
+
+
+<table th:each="cheese : ${cheeses}">
+
+        <p th:text="${cheese.key}">Key</p>
+        <p th:text="${cheese.value}">Value </p>
+
+
+</table>
+
+</body>
+</html>
